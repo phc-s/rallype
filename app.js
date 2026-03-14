@@ -1,5 +1,5 @@
-const zenDots = new FontFace('Zen Dots', 'url(./fonts/zen-dots.ttf)');
-const roboto  = new FontFace('Roboto Slab', 'url(./fonts/robotoslab.ttf)');
+const zenDots = new FontFace('Zen Dots', 'url(./FONT/zen-dots.ttf)');
+const roboto  = new FontFace('Roboto Slab', 'url(./FONT/robotoslab.ttf)');
 
 zenDots.load().then((loadedFont) => {
   document.fonts.add(loadedFont);
@@ -40,7 +40,7 @@ main.style.height = `80vh`;
 main.style.display = `flex`;
 main.style.justifyContent = `center`;
 main.style.alignItems = `center`;
-main.style.background = 'linear-gradient(33deg, rgb(255, 255, 255) 0%, rgb(182, 156, 199) 50%, rgb(255, 255, 255) 100%)';
+main.style.background = 'linear-gradient(33deg, rgb(0, 0, 0) 0%, rgb(18, 5, 27) 50%, rgb(0, 0, 0) 100%)';
 body.appendChild(main);
 
 const footer = document.createElement(`div`);
@@ -56,82 +56,98 @@ const message = document.createElement(`h3`);
 message.textContent = `developing with 💗 by phc-s`;
 message.style.fontFamily = 'Roboto Slab, serif';
 message.style.fontWeight = 900;
-message.style.fontSize = `2vw`;
+message.style.fontSize = `0.9rem`;
 message.style.color = `white`;
 footer.appendChild(message);
 
 const rallype_logo = document.createElement(`img`);
-rallype_logo.src = "./assets/logo.svg";
+rallype_logo.src = "./IMG/logo.svg";
 rallype_logo.style.padding = "3px";
-rallype_logo.style.width = `3vw`;
+rallype_logo.style.width = `2rem`;
 header.appendChild(rallype_logo);
 
 const rallype_text = document.createElement(`h3`);
 rallype_text.style.fontFamily = "'Zen Dots', sans-serif";
 rallype_text.style.fontWeight = 900;
-rallype_text.style.fontSize = `3vw`;
+rallype_text.style.fontSize = `2rem`;
 rallype_text.style.color = `white`;
 rallype_text.textContent = `rallype`;
 header.appendChild(rallype_text);
 
 const table = document.createElement(`div`);
 table.style.width = `80vw`;
-table.style.height = `40vh`;
-table.style.padding = `20px`;
+table.style.height = `50vh`;
+table.style.padding = `30px`;
 table.style.display = `flex`;
 table.style.justifyContent = `center`;
 table.style.alignItems = `center`;
 table.style.flexDirection = `column`
-table.style.backgroundColor = `black`;
-table.style.color = 'white';
+table.style.color = 'rgb(234, 208, 255)';
 table.style.fontFamily = 'Roboto Slab, serif';
 table.style.fontSize = '24px'
 table.style.borderRadius = `50px`;
 main.appendChild(table);
 
 const carsample = document.createElement(`img`);
-carsample.src = "./assets/losanq_amyst_demo.png";
+carsample.src = "./IMG/losanq_amyst_demo.png";
 table.appendChild(carsample);
 
 const mainText = document.createElement(`h3`);
 mainText.textContent = `Hands on the hype of rally racing!`;
 rallype_text.style.fontFamily = "'Zen Dots', sans-serif";
-mainText.style.fontSize = `1.8vw`;
-mainText.style.padding = `18px`;
+mainText.style.fontSize = `1.5rem`;
+mainText.style.padding = `8px`;
 table.appendChild(mainText);
 
 const paragraph_one = document.createElement(`p`);
 paragraph_one.textContent = `🚙 Simulate rally races against the clock with a complex engine that takes into account deep aspects of the racing world!`;
-paragraph_one.style.fontSize = `1.1vw`;
+paragraph_one.style.fontSize = `0.75rem`;
 table.appendChild(paragraph_one);
 
 const paragraph_5 = document.createElement(`p`);
 paragraph_5.textContent = `👨‍💻 Gradually developing, it will evolve from a simple time trial simulation to a full-fledged rich and customizable career game.`;
-paragraph_5.style.fontSize = `1.1vw`;
+paragraph_5.style.fontSize = `0.75rem`;
 table.appendChild(paragraph_5);
 
 const paragraph_2 = document.createElement(`p`);
 paragraph_2.textContent = `⛽ With a wide selection of vehicles, perform maintenance, refueling, cleaning, repairs, and tire changes with care!`;
-paragraph_2.style.fontSize = `1.1vw`;
+paragraph_2.style.fontSize = `0.75rem`;
 table.appendChild(paragraph_2);
 
 const paragraph_3 = document.createElement(`p`);
 paragraph_3.textContent = `🏆 Customize your pilot and co-pilot, evolve their attributes in an LifeRPG system to become a legendary champion!`;
-paragraph_3.style.fontSize = `1.1vw`;
+paragraph_3.style.fontSize = `0.75rem`;
 table.appendChild(paragraph_3);
 
 const paragraph_4 = document.createElement(`p`);
 paragraph_4.textContent = `🌎 Seek new sponsors, climb the rankings, from local to global stages, facing new potential rivals.`;
-paragraph_4.style.fontSize = `1.1vw`;
+paragraph_4.style.fontSize = `0.75rem`;
 table.appendChild(paragraph_4);
 
 const paragraph_6 = document.createElement(`p`);
 paragraph_6.textContent = `🏁 Excite the dream, prepare for a longtime career, there's an exciting world waiting for you!`;
-paragraph_6.style.fontSize = `1.1vw`;
+paragraph_6.style.fontSize = `0.75rem`;
 table.appendChild(paragraph_6);
 
 const Ps = document.querySelectorAll('p');
 Ps.forEach(p => {
-  p.style.color = 'white';
-  p.style.margin = '1px';
+  p.style.color = 'rgb(223, 184, 255)';
+  p.style.fontWeight = '800';
+  p.style.margin = '3px';
 });
+
+const toggleFullscreen = async () => {
+  const element = document.documentElement;
+
+  if (!document.fullscreenElement) {
+    try {
+      await element.requestFullscreen({ navigationUI: "hide" });
+    } catch (err) {
+      console.error(`Error: ${err.message}`);
+    }
+  } else {
+    document.exitFullscreen();
+  }
+};
+
+document.getElementById('myButton').addEventListener('click', toggleFullscreen);
