@@ -135,19 +135,3 @@ Ps.forEach(p => {
   p.style.fontWeight = '800';
   p.style.margin = '3px';
 });
-
-const toggleFullscreen = async () => {
-  const element = document.documentElement;
-
-  if (!document.fullscreenElement) {
-    try {
-      await element.requestFullscreen({ navigationUI: "hide" });
-    } catch (err) {
-      console.error(`Error: ${err.message}`);
-    }
-  } else {
-    document.exitFullscreen();
-  }
-};
-
-document.getElementById('myButton').addEventListener('click', toggleFullscreen);
