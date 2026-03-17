@@ -1,5 +1,5 @@
-const zenDots = new FontFace('Zen Dots', 'url(./FONT/zen-dots.ttf)');
-const roboto  = new FontFace('Roboto Slab', 'url(./FONT/robotoslab.ttf)');
+const zenDots = new FontFace('Zen Dots', 'url(./FONT/ZENDOTS/zen-dots.ttf)');
+const roboto  = new FontFace('Roboto Slab', 'url(./FONT/ROBOTOSLAB/robotoslab.ttf)');
 
 zenDots.load().then((loadedFont) => {
   document.fonts.add(loadedFont);
@@ -53,7 +53,7 @@ footer.style.background = 'linear-gradient(33deg, rgba(52, 0, 107, 1) 0%, rgb(12
 body.appendChild(footer);
 
 const message = document.createElement(`h3`);
-message.textContent = `developing with 💗 by phc-s`;
+message.textContent = `made with 💗 by phc-s`;
 message.style.fontFamily = 'Roboto Slab, serif';
 message.style.fontWeight = 900;
 message.style.fontSize = `0.9rem`;
