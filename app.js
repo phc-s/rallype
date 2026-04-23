@@ -89,7 +89,7 @@ table.style.borderRadius = `50px`;
 main.appendChild(table);
 
 const carsample = document.createElement(`img`);
-carsample.src = "./IMG/losanq_amyst_demo.png";
+carsample.src = "./IMG/CAR/AMYST.png";
 table.appendChild(carsample);
 
 const mainText = document.createElement(`h3`);
